@@ -1,0 +1,9 @@
+<h1>Departamentos</h1>
+
+<% @departamentos.each do |departamento| %>
+    <tr>
+        <td><%= departamento.nome%></td>
+    </tr><br>
+    <td><%= button_to "Remove", departamento, method: :delete, class: "btn btn-danger", 
+        data: {confirm: "Tem certeza que deseja remover #{departamento.nome}?"} %></td>
+<% end %>

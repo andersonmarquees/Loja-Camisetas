@@ -1,0 +1,7 @@
+<%= form_for @departamento do |form| %>
+    <div class="form-group">
+        <%= form.label :departamento %>
+        <%= form.text_field :nome, class: "form-control" %>
+    </div>
+    <%= form.submit "Criar Departamneto", class: "btn btn-primary" %>
+<% end %>

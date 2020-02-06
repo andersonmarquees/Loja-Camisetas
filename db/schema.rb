@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_03_115943) do
+ActiveRecord::Schema.define(version: 2020_02_06_225426) do
+
+  create_table "departamentos", force: :cascade do |t|
+    t.string "nome"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "produtos", force: :cascade do |t|
     t.string "nome"
@@ -19,6 +25,9 @@ ActiveRecord::Schema.define(version: 2020_02_03_115943) do
     t.decimal "preco"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "departamento_id"
+    t.index ["departamento_id"], name: "index_produtos_on_departamento_id"
   end
 
+  add_foreign_key "produtos", "departamentos"
 end
