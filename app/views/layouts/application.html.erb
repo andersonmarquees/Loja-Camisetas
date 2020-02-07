@@ -16,6 +16,9 @@
           <%= text_field_tag :nome, @nome_a_buscar, class: "form-control" %>
           <%= button_to "Buscar", nil,  class: "btn btn-default"%>
         </div>
+        <div class="form-group">
+          <%= link_to "Departamentos", departamentos_path, class: "btn btn-default" %>
+        </div>
       <% end %>
     <% end %>
 

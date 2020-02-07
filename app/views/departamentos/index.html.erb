@@ -5,5 +5,9 @@
         <td><%= departamento.nome%></td>
     </tr><br>
     <td><%= button_to "Remove", departamento, method: :delete, class: "btn btn-danger", 
-        data: {confirm: "Tem certeza que deseja remover #{departamento.nome}?"} %></td>
+        data: {confirm: "Tem certeza que deseja remover #{departamento.nome}?"} %></td><br>
+    <td>
+        <%= link_to "Editar Departamento", edit_departamento_path(departamento), 
+        class: "btn btn-primary" %><br>
+    </td><br>
 <% end %>
